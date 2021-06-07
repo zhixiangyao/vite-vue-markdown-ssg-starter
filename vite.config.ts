@@ -6,6 +6,8 @@ import dotenv from 'dotenv' // Dotenv 是一个零依赖的模块，它能将环
 import fs from 'fs'
 import VitePages from 'vite-plugin-pages'
 import matter from 'gray-matter'
+import ViteMarkdown from 'vite-plugin-md'
+import ViteComponents from 'vite-plugin-components'
 
 const getEnv = (mode: string): any => {
   const envFiles = [/** mode file */ `.env.${mode}`]
@@ -47,6 +49,11 @@ const userConfig = defineConfig({
 
         return route
       },
+    }),
+    ViteMarkdown(),
+    ViteComponents({
+      extensions: ['vue', 'md'],
+      customLoaderMatcher: (path) => path.endsWith('.md'),
     }),
   ],
   resolve: {
