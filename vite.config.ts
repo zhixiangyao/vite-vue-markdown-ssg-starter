@@ -2,8 +2,10 @@ import { defineConfig, UserConfigExport } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { resolve } from 'path'
-import fs from 'fs'
 import dotenv from 'dotenv' // Dotenv 是一个零依赖的模块，它能将环境变量中的变量从 .env 文件加载到 process.env 中
+import fs from 'fs'
+import VitePages from 'vite-plugin-pages'
+import matter from 'gray-matter'
 
 const getEnv = (mode: string): any => {
   const envFiles = [/** mode file */ `.env.${mode}`]
@@ -33,6 +35,18 @@ const userConfig = defineConfig({
        */
       optimize: true,
       enableObjectSlots: true,
+    }),
+    VitePages({
+      extensions: ['vue', 'md'],
+      pagesDir: 'pages',
+      extendRoute(route) {
+        const path = resolve(__dirname, route.component.slice(1))
+        const md = fs.readFileSync(path, 'utf-8')
+        const { data } = matter(md)
+        route.meta = Object.assign(route.meta || {}, { frontmatter: data })
+
+        return route
+      },
     }),
   ],
   resolve: {
