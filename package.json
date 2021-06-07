@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite-ssg build",
     "preview": "npm run build && vite preview",
     "preview:dist": "vite preview",
     "lint:all": "npm run lint:eslint && npm run lint:prettier && npm run lint:stylelint",
@@ -13,6 +13,7 @@
     "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/"
   },
   "dependencies": {
+    "@vueuse/head": "^0.6.0",
     "vue": "^3.0.11",
     "vue-router": "^4.0.8"
   },
@@ -23,6 +24,7 @@
     "@vitejs/plugin-vue": "^1.2.3",
     "@vitejs/plugin-vue-jsx": "^1.1.5",
     "@vue/compiler-sfc": "^3.0.11",
+    "@vue/server-renderer": "^3.0.11",
     "dotenv": "^10.0.0",
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
@@ -41,6 +43,7 @@
     "vite-plugin-components": "^0.10.4",
     "vite-plugin-md": "^0.6.7",
     "vite-plugin-pages": "^0.12.2",
+    "vite-ssg": "^0.11.2",
     "vue-tsc": "^0.0.24"
   }
 }
