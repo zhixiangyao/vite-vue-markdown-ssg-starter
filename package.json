@@ -1,5 +1,5 @@
 {
-  "name": "vite-template",
+  "name": "vite-markdown-ssg-template",
   "private": true,
   "version": "1.0.0",
   "scripts": {
