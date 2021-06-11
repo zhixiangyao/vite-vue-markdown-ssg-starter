@@ -9,8 +9,8 @@
 ## 克隆到本地
 
 ```shell
-git clone git@github.com:xiaojun996/vite-vue-ts-starter.git
-cd vite-vue-ts-starter
+git clone git@github.com:xiaojun996/vite-markdown-ssg-template.git
+cd vite-markdown-ssg-template
 pnpm i # 如果没有安装pnpm，请运行：npm install -g pnpm
 ```
 
@@ -28,6 +28,12 @@ pnpm dev
 
 ```shell
 pnpm build
+```
+
+### preview
+
+```shell
+pnpm preview
 ```
 
 ### 检查全部
