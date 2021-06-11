@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite-ssg build",
     "preview": "npm run build && vite preview",
     "preview:dist": "vite preview",

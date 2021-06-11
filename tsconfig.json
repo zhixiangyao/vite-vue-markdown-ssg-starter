@@ -16,9 +16,11 @@
     // 模块名到基于 baseUrl 的路径映射的列表。
     "paths": {
       // 这里搭配 alias 使用
-      "/@/*": ["src/*"]
+      "/@/*": ["src/*"],
+      "/#/*": ["types/*"]
     },
     "plugins": [
+      // 注意选择工作区间的 TypeScript
       {
         "name": "typescript-plugin-css-modules",
         "options": {
