@@ -1,26 +1,24 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
 import { resolve } from 'path'
 import fs from 'fs'
-import VitePages from 'vite-plugin-pages'
+
+import Vue from '@vitejs/plugin-vue'
+import JSX from '@vitejs/plugin-vue-jsx'
+import Pages from 'vite-plugin-pages'
+import Markdown from 'vite-plugin-md'
+import Components from 'vite-plugin-components'
+
 import matter from 'gray-matter'
-import ViteMarkdown from 'vite-plugin-md'
-import ViteComponents from 'vite-plugin-components'
 
 // https://vitejs.dev/config/
 export const userConfig = defineConfig({
   plugins: [
-    vue({ include: [/\.vue$/, /\.md$/] }),
-    vueJsx({
-      /**
-       * options are passed on to @vue/babel-plugin-jsx
-       * https://github.com/vuejs/jsx-next/blob/dev/packages/babel-plugin-jsx/README-zh_CN.md
-       */
+    Vue({ include: [/\.vue$/, /\.md$/] }),
+    JSX({
       optimize: true,
       enableObjectSlots: true,
     }),
-    VitePages({
+    Pages({
       extensions: ['vue', 'md'],
       pagesDir: 'pages',
       extendRoute(route) {
@@ -32,8 +30,8 @@ export const userConfig = defineConfig({
         return route
       },
     }),
-    ViteMarkdown(),
-    ViteComponents({
+    Markdown(),
+    Components({
       extensions: ['vue', 'md'],
       customLoaderMatcher: (path) => path.endsWith('.md'),
     }),

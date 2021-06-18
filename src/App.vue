@@ -1,4 +1,10 @@
 <template>
+  <div class="">
+    <a href="/">index</a>
+    <a href="/bar">bar</a>
+    <a href="/foo">foo</a>
+  </div>
+
   <router-view />
 </template>
 
@@ -12,7 +18,6 @@ export default defineComponent({
 
 <style>
 #app {
-  margin-top: 60px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
