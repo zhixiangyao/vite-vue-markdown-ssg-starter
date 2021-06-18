@@ -1,3 +1,4 @@
+import 'virtual:windi.css'
 import App from '/@/App.vue'
 /**
  * vite-plugin-pages 生成的路由信息
