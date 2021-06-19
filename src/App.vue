@@ -12,11 +12,8 @@
     </template>
 
     <template #info>
-      <div class="info text-blue-600">
+      <div class="px-3 py-2 rounded-md text-sm font-medium flex-shrink-0 text-blue-600">
         {{ `当前路由地址:${routeName}` }}
-      </div>
-      <div class="info text-red-600">
-        {{ `环境: ${environment}` }}
       </div>
     </template>
   </Nav>
@@ -38,13 +35,6 @@ export default defineComponent({
   components: {
     Nav,
   },
-  /**
-   * 因为 props 是响应式的，你不能使用 ES6 解构，因为它会消除 prop 的响应性。
-   * https://v3.cn.vuejs.org/guide/composition-api-setup.html#props
-   * @param props
-   * @param context
-   * @returns
-   */
   setup() {
     const navbarList = [
       {
@@ -66,9 +56,7 @@ export default defineComponent({
     const router = useRouter()
     const routeName = useCurrentRouteName()
 
-    const environment: unknown = import.meta.env?.VITE_APP_NODE_ENV ?? 'undefined'
-
-    return { navbarList, environment, router, routeName }
+    return { navbarList, router, routeName }
   },
 })
 </script>
@@ -76,10 +64,6 @@ export default defineComponent({
 <style lang="postcss" scoped>
 .button {
   @apply text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium;
-}
-
-.info {
-  @apply px-3 py-2 rounded-md text-sm font-medium flex-shrink-0;
 }
 
 .main {
