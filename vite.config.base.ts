@@ -3,7 +3,6 @@ import { resolve } from 'path'
 import fs from 'fs'
 
 import Vue from '@vitejs/plugin-vue'
-import JSX from '@vitejs/plugin-vue-jsx'
 import Pages from 'vite-plugin-pages'
 import Markdown from 'vite-plugin-md'
 import ViteComponents from 'vite-plugin-components'
@@ -14,10 +13,6 @@ import matter from 'gray-matter'
 export const userConfig = defineConfig({
   plugins: [
     Vue({ include: [/\.vue$/, /\.md$/] }),
-    JSX({
-      optimize: true,
-      enableObjectSlots: true,
-    }),
     Pages({
       extensions: ['vue', 'md'],
       pagesDir: './src/pages',
