@@ -21,7 +21,7 @@ export const userConfig = defineConfig({
     }),
     Pages({
       extensions: ['vue', 'md'],
-      pagesDir: 'pages',
+      pagesDir: './src/pages',
       extendRoute(route) {
         const path = resolve(__dirname, route.component.slice(1))
         const md = fs.readFileSync(path, 'utf-8')
