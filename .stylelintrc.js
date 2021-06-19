@@ -34,7 +34,6 @@ module.exports = {
       },
     ],
     'unit-no-unknown': [true, { ignoreUnits: ['rpx'] }],
-    // Specify the alphabetical order of the attributes in the declaration block
     'order/properties-order': [
       'content',
       'position',

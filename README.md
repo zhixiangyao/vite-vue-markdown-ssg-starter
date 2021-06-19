@@ -4,7 +4,14 @@
 
 **编辑器:** [vs code](https://code.visualstudio.com/)
 
-**插件:** [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)、[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+**插件:** [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)、[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)、[Postcss](https://marketplace.visualstudio.com/items?itemName=csstools.postcss)
+
+```jsonc
+// settings.json 里对 css 的解析使用 postcss
+"files.associations": {
+  "*.css": "postcss"
+}
+```
 
 ## 克隆到本地
 
