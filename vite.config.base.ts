@@ -6,7 +6,7 @@ import Vue from '@vitejs/plugin-vue'
 import JSX from '@vitejs/plugin-vue-jsx'
 import Pages from 'vite-plugin-pages'
 import Markdown from 'vite-plugin-md'
-import Components from 'vite-plugin-components'
+import ViteComponents from 'vite-plugin-components'
 import WindiCSS from 'vite-plugin-windicss'
 
 import matter from 'gray-matter'
@@ -31,8 +31,10 @@ export const userConfig = defineConfig({
         return route
       },
     }),
-    Markdown(),
-    Components({
+    Markdown({
+      headEnabled: true,
+    }),
+    ViteComponents({
       extensions: ['vue', 'md'],
       customLoaderMatcher: (path) => path.endsWith('.md'),
     }),
