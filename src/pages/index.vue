@@ -1,5 +1,6 @@
 <template>
   <div>Hello, Vite!</div>
+  <HelloWorld />
 </template>
 
 <script lang="ts">
@@ -16,8 +17,6 @@ export default defineComponent({
         },
       ],
     })
-
-    return {}
   },
 })
 </script>

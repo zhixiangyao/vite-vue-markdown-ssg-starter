@@ -28,7 +28,7 @@ import { defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
 import { useCurrentRouteName } from '/@/hooks'
 
-import Nav from '/@/layout/Nav'
+import Nav from './layout/Nav.vue'
 
 export default defineComponent({
   name: 'App',

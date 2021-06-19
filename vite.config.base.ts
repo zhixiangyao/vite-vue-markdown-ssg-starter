@@ -11,7 +11,6 @@ import WindiCSS from 'vite-plugin-windicss'
 
 import matter from 'gray-matter'
 
-// https://vitejs.dev/config/
 export const userConfig = defineConfig({
   plugins: [
     Vue({ include: [/\.vue$/, /\.md$/] }),
