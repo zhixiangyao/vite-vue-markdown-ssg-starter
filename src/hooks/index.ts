@@ -1,1 +1,1 @@
-export { useCurrentRoutePath } from './useCurrentRoutePath'
+export { useCurrentRouteName } from './useCurrentRouteName'

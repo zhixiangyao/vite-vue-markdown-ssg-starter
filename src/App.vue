@@ -2,26 +2,20 @@
   <Nav>
     <template #default>
       <button
-        v-for="{ id, label, path } of navbarList"
+        v-for="{ id, label, name } of navbarList"
         :key="id"
-        :class="[
-          path === routePath && 'bg-gray-900',
-          path !== routePath && 'text-gray-300',
-          'text-white',
-          'hover:bg-gray-700',
-          ...baseClassStyle,
-        ]"
-        @click="router.push({ path })"
+        :class="[name === routeName ? 'bg-gray-900' : 'text-gray-300', 'button']"
+        @click="router.push({ name })"
       >
         {{ label }}
       </button>
     </template>
 
     <template #info>
-      <div :class="[...baseClassStyle, 'text-blue-600', 'flex-shrink-0']">
-        {{ `当前路由地址:${routePath}` }}
+      <div class="info text-blue-600">
+        {{ `当前路由地址:${routeName}` }}
       </div>
-      <div :class="[...baseClassStyle, 'text-red-600', 'flex-shrink-0']">
+      <div class="info text-red-600">
         {{ `环境: ${environment}` }}
       </div>
     </template>
@@ -33,9 +27,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
-import { useCurrentRoutePath } from '/@/hooks'
+import { useCurrentRouteName } from '/@/hooks'
 
 import Nav from '/@/layout/Nav'
 
@@ -56,31 +50,38 @@ export default defineComponent({
       {
         id: 1,
         label: 'index',
-        path: '/',
+        name: 'index',
       },
       {
         id: 2,
         label: 'bar',
-        path: '/bar',
+        name: 'bar',
       },
       {
         id: 3,
         label: 'foo',
-        path: '/foo',
+        name: 'foo',
       },
     ]
     const router = useRouter()
-    const routePath = useCurrentRoutePath()
-    const baseClassStyle = ref(['px-3', 'py-2', 'rounded-md', 'text-sm', 'font-medium'])
+    const routeName = useCurrentRouteName()
 
     const environment: unknown = import.meta.env?.VITE_APP_NODE_ENV ?? 'undefined'
 
-    return { navbarList, environment, router, routePath, baseClassStyle }
+    return { navbarList, environment, router, routeName }
   },
 })
 </script>
 
 <style lang="postcss" scoped>
+.button {
+  @apply text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium;
+}
+
+.info {
+  @apply px-3 py-2 rounded-md text-sm font-medium flex-shrink-0;
+}
+
 .main {
   @apply flex flex-col justify-center items-center;
   @apply min-h-screen pt-16;
