@@ -13,10 +13,6 @@
     </template>
 
     <template #info>
-      <div class="px-3 py-2 rounded-md text-sm font-medium flex-shrink-0 text-blue-600">
-        {{ `当前路由地址:${routeName}` }}
-      </div>
-
       <ToggleButton />
     </template>
   </Nav>
