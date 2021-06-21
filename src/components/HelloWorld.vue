@@ -27,6 +27,7 @@
   </p>
 
   <button @click="count++">count is: {{ count }}</button>
+
   <p>
     Edit
     <code class="code">components/HelloWorld.vue</code> to test hot module replacement.
@@ -51,7 +52,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .a {
   color: #42b983;
 }
