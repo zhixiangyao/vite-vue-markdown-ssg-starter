@@ -46,11 +46,14 @@ export const userConfig = defineConfig({
     // https://github.com/antfu/vite-plugin-components
     ViteComponents({
       extensions: ['vue', 'md'],
+      globalComponentsDeclaration: true,
       customLoaderMatcher: (path) => path.endsWith('.md'),
     }),
 
     // https://github.com/antfu/vite-plugin-windicss
-    WindiCSS(),
+    WindiCSS({
+      safelist: 'prose prose-sm m-auto text-left',
+    }),
   ],
   resolve: {
     alias: [
@@ -64,5 +67,9 @@ export const userConfig = defineConfig({
     modules: {
       localsConvention: 'camelCaseOnly',
     },
+  },
+  optimizeDeps: {
+    include: ['vue', 'vue-router', '@vueuse/core'],
+    exclude: ['vue-demi'],
   },
 })
