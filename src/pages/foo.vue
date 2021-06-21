@@ -1,3 +1,20 @@
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+import { useHead } from '@vueuse/head'
+
+export default defineComponent({
+  setup() {
+    useHead({
+      title: 'foo',
+    })
+
+    const count = ref(0)
+
+    return { count }
+  },
+})
+</script>
+
 <template>
   <div>foo</div>
   <div>{{ count }}</div>
@@ -19,25 +36,3 @@
     Click
   </button>
 </template>
-
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
-import { useHead } from '@vueuse/head'
-
-export default defineComponent({
-  setup() {
-    useHead({
-      title: 'foo',
-      meta: [
-        {
-          name: `foo`,
-        },
-      ],
-    })
-
-    const count = ref(0)
-
-    return { count }
-  },
-})
-</script>

@@ -11,11 +11,6 @@ export default defineComponent({
   setup() {
     useHead({
       title: 'index',
-      meta: [
-        {
-          name: `index`,
-        },
-      ],
     })
   },
 })

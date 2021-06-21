@@ -1,0 +1,65 @@
+<template>
+  <Nav>
+    <template #default>
+      <button
+        v-for="{ id, label, name } of navbarList"
+        :key="id"
+        :class="[name === routeName ? 'bg-gray-900' : 'text-gray-300']"
+        class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+        @click="router.push({ name })"
+      >
+        {{ label }}
+      </button>
+    </template>
+
+    <template #info>
+      <div class="px-3 py-2 rounded-md text-sm font-medium flex-shrink-0 text-blue-600">
+        {{ `当前路由地址:${routeName}` }}
+      </div>
+    </template>
+  </Nav>
+
+  <main class="px-4 pt-26 pb-10 min-h-full text-center text-gray-700 dark:text-gray-200">
+    <router-view />
+
+    <div class="mt-5 mx-auto text-center opacity-25 text-sm"> [Default Layout] </div>
+  </main>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useRouter } from 'vue-router'
+import { useCurrentRouteName } from '/@/hooks'
+
+import Nav from './components/Nav.vue'
+
+export default defineComponent({
+  name: 'Default',
+  components: {
+    Nav,
+  },
+  setup() {
+    const navbarList = [
+      {
+        id: 1,
+        label: 'index',
+        name: 'index',
+      },
+      {
+        id: 2,
+        label: 'bar',
+        name: 'bar',
+      },
+      {
+        id: 3,
+        label: 'foo',
+        name: 'foo',
+      },
+    ]
+    const router = useRouter()
+    const routeName = useCurrentRouteName()
+
+    return { navbarList, router, routeName }
+  },
+})
+</script>
