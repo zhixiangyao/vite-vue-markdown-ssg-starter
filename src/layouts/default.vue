@@ -16,6 +16,8 @@
       <div class="px-3 py-2 rounded-md text-sm font-medium flex-shrink-0 text-blue-600">
         {{ `当前路由地址:${routeName}` }}
       </div>
+
+      <ToggleButton />
     </template>
   </Nav>
 
@@ -32,11 +34,13 @@ import { useRouter } from 'vue-router'
 import { useCurrentRouteName } from '/@/hooks'
 
 import Nav from './components/Nav.vue'
+import ToggleButton from './components/ToggleButton.vue'
 
 export default defineComponent({
   name: 'Default',
   components: {
     Nav,
+    ToggleButton,
   },
   setup() {
     const navbarList = [
@@ -54,6 +58,11 @@ export default defineComponent({
         id: 3,
         label: 'foo',
         name: 'foo',
+      },
+      {
+        id: 4,
+        label: 'about',
+        name: 'about',
       },
     ]
     const router = useRouter()

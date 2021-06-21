@@ -10,7 +10,7 @@ import { useHead } from '@vueuse/head'
 export default defineComponent({
   setup() {
     useHead({
-      title: 'index',
+      title: 'Index',
     })
   },
 })

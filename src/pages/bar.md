@@ -1,7 +1,6 @@
 ---
-title: bar
+title: Bar
 meta:
-  - name: bar
   - content1: content1.
   - content2: content2.
 ---
