@@ -13,6 +13,8 @@ import matter from 'gray-matter'
 export const userConfig = defineConfig({
   plugins: [
     Vue({ include: [/\.vue$/, /\.md$/] }),
+
+    // https://github.com/hannoeru/vite-plugin-pages
     Pages({
       extensions: ['vue', 'md'],
       pagesDir: './src/pages',
@@ -25,13 +27,19 @@ export const userConfig = defineConfig({
         return route
       },
     }),
+
+    // https://github.com/antfu/vite-plugin-md
     Markdown({
       headEnabled: true,
     }),
+
+    // https://github.com/antfu/vite-plugin-components
     ViteComponents({
       extensions: ['vue', 'md'],
       customLoaderMatcher: (path) => path.endsWith('.md'),
     }),
+
+    // https://github.com/antfu/vite-plugin-windicss
     WindiCSS(),
   ],
   resolve: {
