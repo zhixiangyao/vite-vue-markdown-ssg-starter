@@ -4,7 +4,13 @@
       <!-- toggle -->
       <div class="relative">
         <!-- input -->
-        <input type="checkbox" :checked="isDark" @change="toggleDark" id="toggle" class="sr-only" />
+        <input
+          type="checkbox"
+          :checked="isDark"
+          @change="() => toggleDark()"
+          id="toggle"
+          class="sr-only"
+        />
         <!-- line -->
         <div class="block bg-gray-600 w-14 h-8 rounded-full"></div>
         <!-- dot -->
