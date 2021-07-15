@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+/// <reference types="vite-plugin-pages/client" />
 
 /**
  * https://cn.vitejs.dev/guide/env-and-mode.html#intellisense
