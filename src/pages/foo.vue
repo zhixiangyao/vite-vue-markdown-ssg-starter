@@ -1,37 +1,26 @@
-<script lang="ts">
-import { defineComponent, ref, reactive, toRef } from 'vue'
+<script lang="ts" setup>
+import { ref, reactive, toRef } from 'vue'
 import { useHead } from '@vueuse/head'
 
-export default defineComponent({
-  setup() {
-    useHead({
-      title: 'Foo',
-    })
+useHead({ title: 'Foo' })
 
-    const temp = { count: 0 }
+const temp = { count: 0 }
+const count1 = ref(temp.count) // 深拷贝
+const count2 = reactive({ value: 0 })
+const count3 = toRef(temp, 'count') // 引用
 
-    const count1 = ref(temp.count) // 深拷贝
-    const count2 = reactive({
-      value: 0,
-    })
-    const count3 = toRef(temp, 'count') // 引用
-
-    function add() {
-      count1.value++
-      count2.value++
-      count3.value++
-    }
-
-    return { add, count1, count2, count3, temp }
-  },
-})
+function add() {
+  count1.value++
+  count2.value++
+  count3.value++
+}
 </script>
 
 <template>
   <div>ref: {{ count1 }}</div>
   <div>reactive: {{ count2.value }}</div>
   <div>toRef: {{ count3 }}</div>
-  <div>temp: {{ temp }}</div>
+  <div>temp: {{ temp.count }}</div>
 
   <button
     class="
