@@ -8,6 +8,7 @@ import generatedRoutes from 'virtual:generated-pages'
 import { setupLayouts } from 'virtual:generated-layouts'
 import 'virtual:windi.css'
 import 'virtual:windi-devtools'
+import '/@/styles/font.css'
 import '/@/styles/main.css'
 import App from '/@/App.vue'
 

@@ -19,8 +19,6 @@
 
   <main class="px-4 pt-26 pb-10 min-h-full text-center text-gray-700 dark:text-gray-200">
     <router-view />
-
-    <div class="mt-5 mx-auto text-center opacity-25 text-sm"> [Default Layout] </div>
   </main>
 </template>
 
@@ -47,16 +45,11 @@ export default defineComponent({
       },
       {
         id: 2,
-        label: 'bar',
-        name: 'bar',
-      },
-      {
-        id: 3,
         label: 'foo',
         name: 'foo',
       },
       {
-        id: 4,
+        id: 3,
         label: 'about',
         name: 'about',
       },
