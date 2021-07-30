@@ -12,6 +12,6 @@ declare module '*.md' {
 
 declare interface Window {
   L2Dwidget: {
-    init(T): any
+    init: any
   }
 }
