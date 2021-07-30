@@ -10,6 +10,10 @@ body,
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+body {
+  @apply overflow-y-scroll;
+}
+
 html.dark {
   background: #121212;
   color: white;
