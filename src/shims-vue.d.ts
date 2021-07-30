@@ -9,3 +9,9 @@ declare module '*.md' {
   const component: ComponentOptions
   export default component
 }
+
+declare interface Window {
+  L2Dwidget: {
+    init(T): any
+  }
+}
