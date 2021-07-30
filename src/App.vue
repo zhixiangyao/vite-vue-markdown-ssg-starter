@@ -3,7 +3,8 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import { Live2dWidget } from '/@/logic'
 
-Live2dWidget()
+onMounted(Live2dWidget)
 </script>
