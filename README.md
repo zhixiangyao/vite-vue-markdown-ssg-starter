@@ -1,6 +1,6 @@
-# Vue 3 + Typescript + Vite + Markdown + SSG + VueRouter + WindiCSS
+# Vue 3 + TypeScript + Vite + Markdown + SSG + VueRouter + WindiCSS
 
-该模板将帮助您开始在 Vite 中使用 Vue3、Typescript、SSG、WindiCSS 进行开发。
+该模板将帮助您开始在 Vite 中使用 Vue3、TypeScript、SSG、WindiCSS 进行开发。
 
 **编辑器:** [vs code](https://code.visualstudio.com/)
 
