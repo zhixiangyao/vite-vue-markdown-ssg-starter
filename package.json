@@ -15,6 +15,7 @@
   "dependencies": {
     "@vueuse/core": "^5.2.0",
     "@vueuse/head": "^0.6.0",
+    "aplayer": "^1.10.1",
     "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.2.2",
     "vue": "^3.1.5",
