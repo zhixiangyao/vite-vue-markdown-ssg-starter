@@ -46,7 +46,7 @@ export const userConfig = defineConfig({
     // https://github.com/antfu/vite-plugin-components
     ViteComponents({
       extensions: ['vue', 'md'],
-      globalComponentsDeclaration: false,
+      globalComponentsDeclaration: true,
       customLoaderMatcher: (path) => path.endsWith('.md'),
     }),
 
