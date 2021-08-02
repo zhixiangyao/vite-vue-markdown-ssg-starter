@@ -1,10 +1,21 @@
 <template>
   <router-view />
+
+  <teleport to="#global-components">
+    <APlayer />
+
+    <Github
+      class="hidden xl:block"
+      href="https://github.com/zhixiangyao/vite-markdown-ssg-template"
+    />
+  </teleport>
 </template>
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import { Live2dWidget } from '/@/logic'
+import APlayer from '/@/components/Aplayer/index.vue'
+import Github from '/@/components/Github.vue'
 
 onMounted(() => {
   const height = Math.floor(document?.body?.clientHeight / 3)
