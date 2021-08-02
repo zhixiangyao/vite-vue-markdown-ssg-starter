@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import APlayer from '/@/components/Aplayer/index.vue'
-import Github from '/@/components/Github.vue'
-import Live2dWidget from '/@/components/Live2dWidget.vue'
+import APlayer from '/@/plugins/Aplayer/index.vue'
+import Github from '/@/plugins/Github.vue'
+import Live2dWidget from '/@/plugins/Live2dWidget.vue'
 </script>
