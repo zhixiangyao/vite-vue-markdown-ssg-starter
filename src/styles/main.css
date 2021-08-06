@@ -11,8 +11,8 @@ body,
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body {
-  @apply overflow-y-scroll;
+html {
+  @apply overflow-y-scroll overflow-x-hidden;
 }
 
 html.dark {
