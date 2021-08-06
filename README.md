@@ -1,10 +1,16 @@
-# Vue 3 + TypeScript + Vite + Markdown + SSG + VueRouter + WindiCSS
+# Vite + Vue 3 + VueRouter + TypeScript + Markdown + SSG + WindiCSS
 
-该模板将帮助您开始在 Vite 中使用 Vue3、TypeScript、SSG、WindiCSS 进行开发。
+该模板将帮助您开始在 Vite 中使用 Vue3 VueRouter TypeScript Markdown SSG WindiCSS 进行开发。
 
-**编辑器:** [vs code](https://code.visualstudio.com/)
+**编辑器:**
 
-**插件:** [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)、[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)、[Postcss](https://marketplace.visualstudio.com/items?itemName=csstools.postcss)
+- [VS Code](https://code.visualstudio.com/)
+
+**插件:**
+
+- [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+- [Postcss](https://marketplace.visualstudio.com/items?itemName=csstools.postcss)
 
 ```jsonc
 // settings.json 里对 css 的解析使用 postcss
