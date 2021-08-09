@@ -20,6 +20,10 @@ html.dark {
   color: white;
 }
 
+html.dark::-webkit-scrollbar {
+  color: rgba(229, 231, 235, 1);
+}
+
 #nprogress {
   pointer-events: none;
 }
