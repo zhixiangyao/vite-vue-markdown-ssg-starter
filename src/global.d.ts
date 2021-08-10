@@ -1,6 +1,26 @@
 import { ViteSSGContext } from 'vite-ssg'
 
 declare global {
+  interface Live2dWidgetOption {
+    display?: {
+      position?: 'right' | 'top' | 'left' | 'buttom'
+      width?: number
+      height?: number
+      hOffset?: number
+      vOffset?: number
+    }
+    react?: {
+      opacityDefault?: number
+      opacityOnHover?: number
+    }
+  }
+
+  interface Window {
+    L2Dwidget: {
+      init: (option: Live2dWidgetOption) => void
+    }
+  }
+
   type UserModule = (ctx: ViteSSGContext) => void
 
   /**

@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import APlayer from '/@/plugins/Aplayer/index.vue'
+import Github from '/@/plugins/Github.vue'
+import Live2dWidget from '/@/plugins/Live2dWidget.vue'
+</script>
+
 <template>
   <router-view />
 
@@ -12,9 +18,3 @@
     />
   </teleport>
 </template>
-
-<script setup lang="ts">
-import APlayer from '/@/plugins/Aplayer/index.vue'
-import Github from '/@/plugins/Github.vue'
-import Live2dWidget from '/@/plugins/Live2dWidget.vue'
-</script>

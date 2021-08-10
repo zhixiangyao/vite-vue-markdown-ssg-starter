@@ -22,42 +22,31 @@
   </main>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
 import { useRouter } from 'vue-router'
+
 import { useCurrentRouteName } from '/@/hooks'
+import Nav from '/@/layouts/components/Nav.vue'
+import ToggleButton from '/@/layouts/components/ToggleButton.vue'
 
-import Nav from './components/Nav.vue'
-import ToggleButton from './components/ToggleButton.vue'
-
-export default defineComponent({
-  name: 'Default',
-  components: {
-    Nav,
-    ToggleButton,
+const navbarList = [
+  {
+    id: 1,
+    label: 'index',
+    name: 'index',
   },
-  setup() {
-    const navbarList = [
-      {
-        id: 1,
-        label: 'index',
-        name: 'index',
-      },
-      {
-        id: 2,
-        label: 'foo',
-        name: 'foo',
-      },
-      {
-        id: 3,
-        label: 'about',
-        name: 'about',
-      },
-    ]
-    const router = useRouter()
-    const routeName = useCurrentRouteName()
-
-    return { navbarList, router, routeName }
+  {
+    id: 2,
+    label: 'foo',
+    name: 'foo',
   },
-})
+  {
+    id: 3,
+    label: 'about',
+    name: 'about',
+  },
+]
+
+const router = useRouter()
+const routeName = useCurrentRouteName()
 </script>
