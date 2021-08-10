@@ -3,6 +3,7 @@
 .output.js
 /node_modules/**
 components.d.ts
+zhixiangyao.github.io
 
 **/*.svg
 **/*.sh
