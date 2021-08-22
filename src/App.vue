@@ -14,7 +14,7 @@ import Live2dWidget from '/@/plugins/Live2dWidget.vue'
 
     <Github
       class="hidden xl:block"
-      href="https://github.com/zhixiangyao/vite-markdown-ssg-template"
+      href="https://github.com/zhixiangyao/vite-vue-markdown-ssg-starter"
     />
   </teleport>
 </template>

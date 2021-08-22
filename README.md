@@ -27,8 +27,8 @@
 ## Clone
 
 ```shell
-git clone git@github.com:zhixiangyao/vite-markdown-ssg-template.git
-cd vite-markdown-ssg-template
+git clone git@github.com:zhixiangyao/vite-vue-markdown-ssg-starter.git
+cd vite-vue-markdown-ssg-starter
 pnpm i # 如果没有安装pnpm，请运行：npm install -g pnpm
 ```
 
