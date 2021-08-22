@@ -19,7 +19,12 @@
 }
 ```
 
-## 克隆到本地
+**开发环境:**
+
+- NodeJs
+- Git
+
+## Clone
 
 ```shell
 git clone git@github.com:zhixiangyao/vite-markdown-ssg-template.git
@@ -49,25 +54,25 @@ pnpm build
 pnpm preview
 ```
 
-### 检查全部
+### Check all
 
 ```shell
 pnpm lint:all
 ```
 
-### 检查 ESlint
+### Check ESlint
 
 ```shell
 pnpm lint:all
 ```
 
-### 检查 Prettier
+### Check Prettier
 
 ```shell
 pnpm lint:prettier
 ```
 
-### 检查 Stylelint
+### Check Stylelint
 
 ```shell
 pnpm lint:stylelint
