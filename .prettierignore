@@ -1,11 +1,14 @@
-/dist/*
-.local
-.output.js
-/node_modules/**
-components.d.ts
+public
+dist
+dist-ssr
+build
+node_modules
+.husky
 zhixiangyao.github.io
 
+package-lock.json
+pnpm-lock.yaml
+tsconfig.json
 **/*.svg
 **/*.sh
-
-/public/*
+components.d.ts
