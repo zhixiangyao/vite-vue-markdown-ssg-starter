@@ -2,6 +2,11 @@
   "name": "vite-vue-markdown-ssg-starter",
   "version": "0.1.0",
   "author": "zhixiangyao <blueskyzx@icloud.com> <https://github.com/zhixiangyao>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhixiangyao/vite-vue-markdown-ssg-starter.git"
+  },
+  "homepage": "https://github.com/zhixiangyao/vite-vue-markdown-ssg-starter",
   "scripts": {
     "dev": "vite --host",
     "build": "vite-ssg build",
@@ -10,7 +15,20 @@
     "lint:all": "npm run lint:eslint && npm run lint:prettier && npm run lint:stylelint",
     "lint:eslint": "eslint \"{src,mock}/**/*.{vue,ts,js,tsx}\" --fix",
     "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{ts,js,json,tsx,jsx,css,less,scss,vue,html,md}\"",
-    "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/"
+    "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.{vue,ts,tsx}": [
+      "npx eslint --fix"
+    ],
+    "src/**/*.{js,json,tsx,css,less,scss,vue,html,md}": [
+      "npx prettier --write --loglevel warn "
+    ],
+    "src/**/*.{vue,less,postcss,css,scss}": [
+      "npx stylelint --fix --cache --cache-location node_modules/.cache/stylelint/"
+    ]
   },
   "dependencies": {
     "@vueuse/core": "^5.3.0",
@@ -35,6 +53,8 @@
     "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-vue": "^7.16.0",
     "gray-matter": "^4.0.3",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.1.2",
     "markdown-it-prism": "^2.2.0",
     "prettier": "^2.3.2",
     "stylelint": "^13.13.1",
