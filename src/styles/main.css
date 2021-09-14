@@ -11,16 +11,16 @@ body,
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-html {
-  @apply overflow-y-scroll overflow-x-hidden;
-}
-
 html.dark {
   background: #121212;
   color: white;
 }
 
-html.dark::-webkit-scrollbar {
+body {
+  @apply overflow-y-scroll overflow-x-hidden;
+}
+
+body.dark::-webkit-scrollbar {
   color: rgba(229, 231, 235, 1);
 }
 
