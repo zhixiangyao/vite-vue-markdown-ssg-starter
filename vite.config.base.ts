@@ -6,7 +6,8 @@ import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Markdown from 'vite-plugin-md'
-import ViteComponents from 'vite-plugin-components'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import WindiCSS from 'vite-plugin-windicss'
 
 import Prism from 'markdown-it-prism'
@@ -43,11 +44,12 @@ export const userConfig = defineConfig({
       },
     }),
 
-    // https://github.com/antfu/vite-plugin-components
-    ViteComponents({
+    // https://github.com/antfu/unplugin-plugin-components
+    Components({
       extensions: ['vue', 'md'],
-      globalComponentsDeclaration: true,
-      customLoaderMatcher: (path) => path.endsWith('.md'),
+      dts: true,
+      resolvers: [ElementPlusResolver()],
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
     }),
 
     // https://github.com/antfu/vite-plugin-windicss
