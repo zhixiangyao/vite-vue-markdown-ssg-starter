@@ -3,7 +3,7 @@ import { ViteSSGContext } from 'vite-ssg'
 declare global {
   interface Live2dWidgetOption {
     display?: {
-      position?: 'right' | 'top' | 'left' | 'buttom'
+      position?: 'right' | 'top' | 'left' | 'bottom'
       width?: number
       height?: number
       hOffset?: number
