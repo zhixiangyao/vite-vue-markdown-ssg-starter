@@ -11,6 +11,7 @@ import WindiCSS from 'vite-plugin-windicss'
 
 import Prism from 'markdown-it-prism'
 import matter from 'gray-matter'
+import viteCompression from 'vite-plugin-compression'
 
 import type { UserConfigExport } from 'vite'
 
@@ -57,6 +58,9 @@ export const baseConfig: UserConfigExport = {
     WindiCSS({
       safelist: 'prose prose-sm m-auto text-left',
     }),
+
+    // https://github.com/anncwb/vite-plugin-compression/blob/main/README.zh_CN.md
+    viteCompression(),
   ],
   resolve: {
     alias: [
