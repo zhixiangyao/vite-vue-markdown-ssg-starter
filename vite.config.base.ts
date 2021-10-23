@@ -1,4 +1,3 @@
-import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import fs from 'fs'
 
@@ -13,7 +12,9 @@ import WindiCSS from 'vite-plugin-windicss'
 import Prism from 'markdown-it-prism'
 import matter from 'gray-matter'
 
-export const userConfig = defineConfig({
+import type { UserConfigExport } from 'vite'
+
+export const baseConfig: UserConfigExport = {
   plugins: [
     Vue({ include: [/\.vue$/, /\.md$/] }),
 
@@ -74,4 +75,4 @@ export const userConfig = defineConfig({
     include: ['vue', 'vue-router', '@vueuse/core'],
     exclude: ['vue-demi'],
   },
-})
+}
