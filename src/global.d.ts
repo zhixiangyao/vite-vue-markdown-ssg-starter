@@ -15,12 +15,6 @@ declare global {
     }
   }
 
-  interface Window {
-    L2Dwidget: {
-      init: (option: Live2dWidgetOption) => void
-    }
-  }
-
   type UserModule = (ctx: ViteSSGContext) => void
 
   /**
