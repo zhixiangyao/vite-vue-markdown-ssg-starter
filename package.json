@@ -31,7 +31,7 @@
     ]
   },
   "dependencies": {
-    "@vueuse/core": "^6.7.3",
+    "@vueuse/core": "^6.7.4",
     "@vueuse/head": "^0.6.0",
     "aplayer": "^1.10.1",
     "nprogress": "^0.2.0",
@@ -40,11 +40,11 @@
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
-    "@types/node": "^16.11.4",
+    "@types/node": "^16.11.6",
     "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
-    "@vitejs/plugin-vue": "^1.9.3",
+    "@vitejs/plugin-vue": "^1.9.4",
     "@vue/compiler-sfc": "^3.2.20",
     "@vue/server-renderer": "^3.2.20",
     "dotenv": "^10.0.0",
@@ -54,7 +54,7 @@
     "eslint-plugin-vue": "^7.20.0",
     "gray-matter": "^4.0.3",
     "husky": "^7.0.4",
-    "lint-staged": "^11.2.3",
+    "lint-staged": "^11.2.6",
     "markdown-it-prism": "^2.2.1",
     "prettier": "^2.4.1",
     "stylelint": "^13.13.1",
@@ -63,18 +63,18 @@
     "stylelint-order": "^4.1.0",
     "typescript": "^4.4.4",
     "unplugin-vue-components": "^0.15.6",
-    "vite": "^2.6.10",
+    "vite": "^2.6.13",
     "vite-plugin-compression": "^0.3.5",
-    "vite-plugin-md": "^0.11.2",
-    "vite-plugin-pages": "^0.18.1",
+    "vite-plugin-md": "^0.11.4",
+    "vite-plugin-pages": "^0.18.2",
     "vite-plugin-vue-layouts": "^0.4.1",
     "vite-plugin-windicss": "^1.4.12",
-    "vite-ssg": "^0.15.5",
+    "vite-ssg": "^0.15.6",
     "vue-tsc": "^0.3.0",
-    "windicss": "^3.1.9"
+    "windicss": "^3.2.0"
   },
   "license": "MIT",
   "engines": {
-    "node": "^12 || ^14 || ^15 || ^16"
+    "node": "^12 || ^14 || ^15 || ^16 || ^17"
   }
 }
