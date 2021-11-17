@@ -6,7 +6,6 @@ import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Markdown from 'vite-plugin-md'
 import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import WindiCSS from 'vite-plugin-windicss'
 
 import Prism from 'markdown-it-prism'
@@ -50,7 +49,7 @@ export const baseConfig: UserConfigExport = {
     Components({
       extensions: ['vue', 'md'],
       dts: true,
-      resolvers: [ElementPlusResolver()],
+      resolvers: [],
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
     }),
 
