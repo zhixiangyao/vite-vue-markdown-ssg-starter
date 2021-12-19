@@ -1,25 +1,25 @@
 # Vite + Vue 3 + VueRouter + TypeScript + Markdown + SSG + WindiCSS
 
-该模板将帮助您开始在 Vite 中使用 Vue3 VueRouter TypeScript Markdown SSG WindiCSS 进行开发。
+This template will help you start developing in Vite using Vue3 VueRouter TypeScript Markdown SSG WindiCSS.
 
-**编辑器:**
+**Editor:**
 
-- [VS Code](https://code.visualstudio.com/)
+- [VSCode](https://code.visualstudio.com/)
 
-**插件:**
+**VSCode Extension:**
 
 - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 - [Postcss](https://marketplace.visualstudio.com/items?itemName=csstools.postcss)
 
 ```jsonc
-// settings.json 里对 css 的解析使用 postcss
+// Set CSS parsing using PostCSS in settings.json
 "files.associations": {
   "*.css": "postcss"
 }
 ```
 
-**开发环境:**
+**Development ENV:**
 
 - NodeJs
 - Git
@@ -29,14 +29,14 @@
 ```shell
 git clone git@github.com:zhixiangyao/vite-vue-markdown-ssg-starter.git
 cd vite-vue-markdown-ssg-starter
-pnpm i # 如果没有安装pnpm，请运行：npm install -g pnpm
+pnpm i # If not install pnpm, please run: npm install -g pnpm
 ```
 
 ## Usage
 
 ### Development
 
-只需运行并访问 http://localhost:3000
+click it http://localhost:3000
 
 ```shell
 pnpm dev
