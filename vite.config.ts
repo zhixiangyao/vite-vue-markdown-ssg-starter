@@ -1,8 +1,7 @@
+import { defineConfig, type ConfigEnv } from 'vite'
+
 import { getEnv } from './vite.config.utils'
 import { baseConfig } from './vite.config.base'
-import { defineConfig } from 'vite'
-
-import type { ConfigEnv } from 'vite'
 
 export default ({ command, mode }: ConfigEnv) => {
   /**
