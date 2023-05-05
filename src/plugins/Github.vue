@@ -56,7 +56,7 @@ const href = toRef(props, 'href')
   }
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
   .github-corner:hover .octo-arm {
     animation: none;
   }
