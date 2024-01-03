@@ -8,9 +8,9 @@ This template will help you start developing in Vite using Vue3 VueRouter TypeSc
 
 **VSCode Extension:**
 
-- [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+- [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
+- [Vue Language Features (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
-- [Postcss](https://marketplace.visualstudio.com/items?itemName=csstools.postcss)
 
 ```jsonc
 // Set CSS parsing using PostCSS in settings.json
@@ -54,26 +54,8 @@ pnpm build
 pnpm preview
 ```
 
-### Check all
+### Check
 
 ```shell
-pnpm lint:all
-```
-
-### Check ESlint
-
-```shell
-pnpm lint:all
-```
-
-### Check Prettier
-
-```shell
-pnpm lint:prettier
-```
-
-### Check Stylelint
-
-```shell
-pnpm lint:stylelint
+pnpm lint
 ```

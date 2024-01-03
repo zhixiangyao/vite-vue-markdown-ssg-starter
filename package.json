@@ -13,18 +13,18 @@
     "build": "vite-ssg build",
     "preview": "npm run build && vite preview",
     "preview:dist": "vite preview",
-    "lint:all": "npm run lint:eslint && npm run lint:prettier && npm run lint:stylelint",
-    "lint:prettier": "prettier --cache --write --log-level warn \"**/*.{ts,js,json,tsx,jsx,css,vue,html,md}\"",
+    "lint": "npm run lint:prettier && npm run lint:eslint && npm run lint:stylelint",
+    "lint:prettier": "prettier --cache --write --log-level warn \"src/**/*.{ts,js,json,tsx,jsx,css,vue,html,md}\"",
     "lint:eslint": "eslint --fix \"src/**/*.{vue,ts,js,tsx}\" --cache --cache-location node_modules/.cache/eslint/",
-    "lint:stylelint": "stylelint --fix \"**/*.{vue,css}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "lint:stylelint": "stylelint --fix \"src/**/*.{vue,css}\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint-staged": "lint-staged",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "src/**/*.{vue,ts,tsx}": [
+    "src/**/*.{vue,ts,js,tsx}": [
       "npx eslint --fix --cache --cache-location node_modules/.cache/eslint/"
     ],
-    "src/**/*.{js,json,tsx,css,vue,html,md}": [
+    "src/**/*.{ts,js,json,tsx,jsx,css,vue,html,md}": [
       "npx prettier --cache --write --log-level warn"
     ],
     "src/**/*.{vue,css}": [
@@ -40,24 +40,18 @@
     "vue-router": "4.2.5"
   },
   "devDependencies": {
-    "@rollup/pluginutils": "5.1.0",
     "@types/node": "20.10.6",
     "@types/nprogress": "0.2.3",
     "@typescript-eslint/eslint-plugin": "6.17.0",
     "@typescript-eslint/parser": "6.17.0",
     "@vitejs/plugin-vue": "4.6.2",
-    "@vue/compiler-sfc": "3.4.3",
-    "@vue/server-renderer": "3.4.3",
     "dotenv": "16.3.1",
     "eslint": "8.56.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "5.1.2",
     "eslint-plugin-vue": "9.19.2",
-    "fp-ts": "2.16.1",
     "gray-matter": "4.0.3",
-    "happy-dom": "12.10.3",
     "husky": "8.0.3",
-    "inferred-types": "0.37.6",
     "lint-staged": "15.2.0",
     "markdown-it-prism": "2.3.0",
     "postcss-html": "1.5.0",
