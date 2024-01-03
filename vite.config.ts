@@ -7,7 +7,7 @@ import fs from 'fs'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
-import Markdown from 'vite-plugin-vue-markdown'
+import Markdown from 'unplugin-vue-markdown/vite'
 import WindiCSS from 'vite-plugin-windicss'
 
 import Prism from 'markdown-it-prism'
@@ -69,8 +69,8 @@ const baseConfig: UserConfigExport = {
     },
   },
   optimizeDeps: {
-    include: ['vue', 'vue-router', '@vueuse/core'],
-    exclude: ['vue-demi'],
+    include: [],
+    exclude: [],
   },
 }
 

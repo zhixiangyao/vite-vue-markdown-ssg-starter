@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useHead } from '@vueuse/head'
+import { useHead } from '@unhead/vue'
 import HelloWorld from '/@/components/HelloWorld.vue'
 
 useHead({

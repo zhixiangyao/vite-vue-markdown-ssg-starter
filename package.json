@@ -14,74 +14,74 @@
     "preview": "npm run build && vite preview",
     "preview:dist": "vite preview",
     "lint:all": "npm run lint:eslint && npm run lint:prettier && npm run lint:stylelint",
-    "lint:eslint": "eslint \"{src,mock}/**/*.{vue,ts,js,tsx}\" --fix",
-    "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{ts,js,json,tsx,jsx,css,less,scss,vue,html,md}\"",
-    "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "lint:prettier": "prettier --cache --write --log-level warn \"**/*.{ts,js,json,tsx,jsx,css,vue,html,md}\"",
+    "lint:eslint": "eslint --fix \"src/**/*.{vue,ts,js,tsx}\" --cache --cache-location node_modules/.cache/eslint/",
+    "lint:stylelint": "stylelint --fix \"**/*.{vue,css}\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint-staged": "lint-staged",
     "prepare": "husky install"
   },
   "lint-staged": {
     "src/**/*.{vue,ts,tsx}": [
-      "npx eslint --fix"
+      "npx eslint --fix --cache --cache-location node_modules/.cache/eslint/"
     ],
-    "src/**/*.{js,json,tsx,css,less,scss,vue,html,md}": [
-      "npx prettier --write --loglevel warn "
+    "src/**/*.{js,json,tsx,css,vue,html,md}": [
+      "npx prettier --cache --write --log-level warn"
     ],
-    "src/**/*.{vue,less,postcss,css,scss}": [
+    "src/**/*.{vue,css}": [
       "npx stylelint --fix --cache --cache-location node_modules/.cache/stylelint/"
     ]
   },
   "dependencies": {
-    "@vueuse/core": "^10.1.2",
-    "@vueuse/head": "^1.1.26",
-    "aplayer": "^1.10.1",
-    "nprogress": "^0.2.0",
-    "prism-theme-vars": "^0.2.4",
-    "vue": "^3.2.47",
-    "vue-router": "^4.1.6"
+    "@vueuse/core": "10.7.1",
+    "@unhead/vue": "1.8.9",
+    "aplayer": "1.10.1",
+    "nprogress": "0.2.0",
+    "prism-theme-vars": "0.2.4",
+    "vue": "3.4.3",
+    "vue-router": "4.2.5"
   },
   "devDependencies": {
-    "@rollup/pluginutils": "^5.0.2",
-    "@types/node": "^18.16.3",
-    "@types/nprogress": "^0.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.59.2",
-    "@typescript-eslint/parser": "^5.59.2",
-    "@vitejs/plugin-vue": "^4.2.1",
-    "@vue/compiler-sfc": "^3.2.47",
-    "@vue/server-renderer": "^3.2.47",
-    "dotenv": "^16.0.3",
-    "eslint": "^8.39.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.11.0",
-    "fp-ts": "^2.14.0",
-    "gray-matter": "^4.0.3",
-    "happy-dom": "^9.10.8",
-    "husky": "^8.0.3",
-    "inferred-types": "^0.37.6",
-    "lint-staged": "^13.2.2",
-    "markdown-it-prism": "^2.3.0",
-    "postcss-html": "^1.5.0",
-    "prettier": "^2.8.8",
-    "rollup": "^3.21.4",
-    "stylelint": "^15.6.1",
-    "stylelint-config-recommended-vue": "^1.4.0",
-    "stylelint-config-standard": "^33.0.0",
-    "stylelint-order": "^6.0.3",
-    "typescript": "^5.0.4",
-    "vite": "^4.3.4",
-    "vite-plugin-compression": "^0.5.1",
-    "vite-plugin-pages": "^0.29.0",
-    "vite-plugin-vue-layouts": "^0.8.0",
-    "vite-plugin-vue-markdown": "^0.23.0",
-    "vite-plugin-windicss": "^1.8.10",
-    "vite-ssg": "^0.22.2",
-    "vue-tsc": "^1.6.4",
-    "windicss": "^3.5.6"
+    "@rollup/pluginutils": "5.1.0",
+    "@types/node": "20.10.6",
+    "@types/nprogress": "0.2.3",
+    "@typescript-eslint/eslint-plugin": "6.17.0",
+    "@typescript-eslint/parser": "6.17.0",
+    "@vitejs/plugin-vue": "4.6.2",
+    "@vue/compiler-sfc": "3.4.3",
+    "@vue/server-renderer": "3.4.3",
+    "dotenv": "16.3.1",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.1.2",
+    "eslint-plugin-vue": "9.19.2",
+    "fp-ts": "2.16.1",
+    "gray-matter": "4.0.3",
+    "happy-dom": "12.10.3",
+    "husky": "8.0.3",
+    "inferred-types": "0.37.6",
+    "lint-staged": "15.2.0",
+    "markdown-it-prism": "2.3.0",
+    "postcss-html": "1.5.0",
+    "prettier": "3.1.1",
+    "rollup": "4.9.2",
+    "stylelint": "16.1.0",
+    "stylelint-config-recommended-vue": "1.5.0",
+    "stylelint-config-standard": "36.0.0",
+    "stylelint-order": "6.0.4",
+    "typescript": "5.3.3",
+    "vite": "4.5.1",
+    "vite-plugin-compression": "0.5.1",
+    "vite-plugin-pages": "0.32.0",
+    "vite-plugin-vue-layouts": "0.11.0",
+    "unplugin-vue-markdown": "0.25.2",
+    "vite-plugin-windicss": "1.9.3",
+    "vite-ssg": "0.23.6",
+    "vue-tsc": "1.8.27",
+    "windicss": "3.5.6"
   },
   "license": "MIT",
   "engines": {
-    "node": ">=16.17.0",
-    "pnpm": ">=7.17.0"
+    "node": ">=18",
+    "pnpm": ">=8"
   }
 }
