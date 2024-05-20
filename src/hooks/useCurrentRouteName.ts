@@ -1,12 +1,8 @@
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
-import type { Ref } from 'vue'
-
-type RefRouterName = Ref<string>
-
-export function useCurrentRouteName(): RefRouterName {
-  const name = ref('') as RefRouterName
+export function useCurrentRouteName() {
+  const name = ref('')
   const route = useRoute()
 
   watch(
