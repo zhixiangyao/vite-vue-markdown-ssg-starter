@@ -1,5 +1,9 @@
-/dist/*
-/public/*
-/.vscode/*
-/node_modules/*
-zhixiangyao.github.io
+dist
+dist-ssr
+public
+node_modules
+.husky
+
+**/*.html
+**/*.js
+**/*.mjs
