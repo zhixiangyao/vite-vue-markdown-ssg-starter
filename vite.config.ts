@@ -1,9 +1,8 @@
-import { defineConfig, type ConfigEnv } from 'vite'
-
-import { getEnv } from './vite.config.utils'
 import { resolve } from 'path'
 import fs from 'fs'
 
+import { defineConfig, type ConfigEnv } from 'vite'
+import dotenv from 'dotenv' // Dotenv is a zero-dependency module that extracts the variables in the env variable from the '.env*' file
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
@@ -15,6 +14,24 @@ import matter from 'gray-matter'
 import viteCompression from 'vite-plugin-compression'
 
 import type { UserConfigExport } from 'vite'
+
+type Env = {
+  [K: string]: string
+}
+
+export const getEnv = (mode: string) => {
+  const envFileName = `.env.${mode}`
+  const envObject: Env = Object.create(null)
+
+  try {
+    const envConfig = dotenv.parse(fs.readFileSync(envFileName))
+    for (const k in envConfig) Object.assign(envObject, { [k]: envConfig[k] })
+    return envObject
+  } catch (error) {
+    console.error(error)
+    return envObject
+  }
+}
 
 const baseConfig: UserConfigExport = {
   plugins: [
