@@ -1,4 +1,7 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
-  "css.validate": false
+  "css.customData": [".vscode/tailwindcss.json"],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
 }
