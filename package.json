@@ -18,7 +18,7 @@
     "lint:eslint": "eslint --fix \"./**/*.{vue,ts,js,tsx}\" --cache --cache-location node_modules/.cache/eslint/",
     "lint:stylelint": "stylelint --fix \"./**/*.{vue,css}\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "lint-staged": {
     "./**/*.{vue,ts,js,tsx}": [
