@@ -15,24 +15,6 @@ import viteCompression from 'vite-plugin-compression'
 
 import type { UserConfigExport } from 'vite'
 
-type Env = {
-  [K: string]: string
-}
-
-export const getEnv = (mode: string) => {
-  const envFileName = `.env.${mode}`
-  const envObject: Env = Object.create(null)
-
-  try {
-    const envConfig = dotenv.parse(fs.readFileSync(envFileName))
-    for (const k in envConfig) Object.assign(envObject, { [k]: envConfig[k] })
-    return envObject
-  } catch (error) {
-    console.error(error)
-    return envObject
-  }
-}
-
 const baseConfig: UserConfigExport = {
   plugins: [
     Vue({ include: [/\.vue$/, /\.md$/] }),
@@ -99,7 +81,7 @@ export default ({ command, mode }: ConfigEnv) => {
    * import.meta.env.PROD: {boolean}      Whether the app is runtime in the production environment.
    * import.meta.env.DEV: {boolean}       Whether app runtime is in the development environment (always the opposite of import.meta.env.PROD).
    */
-  const { VITE_APP_ENV, VITE_APP_PROXY_URL, VITE_APP_BASE_URL } = getEnv(mode)
+  const { VITE_APP_ENV, VITE_APP_PROXY_URL, VITE_APP_BASE_URL } = dotenv.parse(fs.readFileSync(`.env.${mode}`))
 
   setTimeout(() => {
     console.log()
