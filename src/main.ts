@@ -1,8 +1,6 @@
-import { ViteSSG } from 'vite-ssg'
-import generatedRoutes from 'virtual:generated-pages'
 import { setupLayouts } from 'virtual:generated-layouts'
-
-import App from '/@/App.vue'
+import generatedRoutes from 'virtual:generated-pages'
+import { ViteSSG } from 'vite-ssg'
 
 /**
  * vite-plugin-pages:         Generating routing information
@@ -10,9 +8,11 @@ import App from '/@/App.vue'
  * virtual:generated-layouts: It comes from tsconfig.json-compilerOptions-types -> "vite-plugin-vue-layouts/client"
  */
 import 'virtual:windi.css'
+
 import 'virtual:windi-devtools'
 import '/@/styles/font.css'
 import '/@/styles/main.css'
+import App from '/@/App.vue'
 
 const routes = setupLayouts(generatedRoutes)
 
@@ -22,5 +22,5 @@ export const createApp = ViteSSG(App, { routes }, (ctx) => {
   const modules: Module = import.meta.glob('./modules/*.ts', { eager: true })
 
   // install all modules under `modules/`
-  Object.values(modules).map((m) => m.install?.(ctx))
+  Object.values(modules).map(m => m.install?.(ctx))
 })

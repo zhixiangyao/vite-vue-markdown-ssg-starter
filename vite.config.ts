@@ -1,19 +1,19 @@
-import { resolve } from 'path'
-import fs from 'fs'
+import type { ConfigEnv, UserConfigExport } from 'vite'
+import { defineConfig } from 'vite'
+import fs from 'node:fs'
 
-import { defineConfig, type ConfigEnv } from 'vite'
-import dotenv from 'dotenv' // Dotenv is a zero-dependency module that extracts the variables in the env variable from the '.env*' file
+import { resolve } from 'node:path'
 import Vue from '@vitejs/plugin-vue'
+import dotenv from 'dotenv' // Dotenv is a zero-dependency module that extracts the variables in the env variable from the '.env*' file
+import matter from 'gray-matter'
+import Prism from 'markdown-it-prism'
+import Markdown from 'unplugin-vue-markdown/vite'
+
+import viteCompression from 'vite-plugin-compression'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
-import Markdown from 'unplugin-vue-markdown/vite'
+
 import WindiCSS from 'vite-plugin-windicss'
-
-import Prism from 'markdown-it-prism'
-import matter from 'gray-matter'
-import viteCompression from 'vite-plugin-compression'
-
-import type { UserConfigExport } from 'vite'
 
 const baseConfig: UserConfigExport = {
   plugins: [
@@ -85,9 +85,9 @@ export default ({ command, mode }: ConfigEnv) => {
 
   setTimeout(() => {
     console.log()
-    console.log('\x1b[36m%s\x1b[0m', `🏠--APP环境(VITE_APP_ENV): ${VITE_APP_ENV}`)
-    console.log('\x1b[36m%s\x1b[0m', `😈--APP代理URL(VITE_APP_PROXY_URL): ${VITE_APP_PROXY_URL}`)
-    console.log('\x1b[36m%s\x1b[0m', `🔗--APP基础URL(VITE_APP_BASE_URL): ${VITE_APP_BASE_URL}`)
+    console.log('\x1B[36m%s\x1B[0m', `🏠--APP环境(VITE_APP_ENV): ${VITE_APP_ENV}`)
+    console.log('\x1B[36m%s\x1B[0m', `😈--APP代理URL(VITE_APP_PROXY_URL): ${VITE_APP_PROXY_URL}`)
+    console.log('\x1B[36m%s\x1B[0m', `🔗--APP基础URL(VITE_APP_BASE_URL): ${VITE_APP_BASE_URL}`)
     console.log()
   }, 66)
 

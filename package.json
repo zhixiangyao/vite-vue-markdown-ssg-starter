@@ -1,13 +1,18 @@
 {
   "name": "vite-vue-markdown-ssg-starter",
+  "type": "module",
   "version": "0.1.0",
   "author": "zhixiangyao <blueskyzx@icloud.com> <https://github.com/zhixiangyao>",
-  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/zhixiangyao/vite-vue-markdown-ssg-starter",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhixiangyao/vite-vue-markdown-ssg-starter.git"
   },
-  "homepage": "https://github.com/zhixiangyao/vite-vue-markdown-ssg-starter",
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=9"
+  },
   "scripts": {
     "dev": "vite --host",
     "build": "vite-ssg build",
@@ -17,17 +22,6 @@
     "lint:stylelint": "stylelint \"./**/*.{vue,postcss,css}\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint-staged": "lint-staged",
     "postinstall": "simple-git-hooks"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*": [
-      "eslint --cache --cache-location node_modules/.cache/eslint/"
-    ],
-    "./**/*.{vue,postcss,css}": [
-      "stylelint --cache --cache-location node_modules/.cache/stylelint/"
-    ]
   },
   "dependencies": {
     "@unhead/vue": "1.11.14",
@@ -66,9 +60,15 @@
     "vue-tsc": "2.1.10",
     "windicss": "3.5.6"
   },
-  "license": "MIT",
-  "engines": {
-    "node": ">=22",
-    "pnpm": ">=9"
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": [
+      "eslint --cache --cache-location node_modules/.cache/eslint/"
+    ],
+    "./**/*.{vue,postcss,css}": [
+      "stylelint --cache --cache-location node_modules/.cache/stylelint/"
+    ]
   }
 }

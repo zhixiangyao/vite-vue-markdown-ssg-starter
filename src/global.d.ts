@@ -1,4 +1,4 @@
-import { ViteSSGContext } from 'vite-ssg'
+import type { ViteSSGContext } from 'vite-ssg'
 
 declare global {
   interface Live2dWidgetOption {

@@ -11,13 +11,6 @@ This template will help you start developing in Vite using Vue3 VueRouter TypeSc
 - [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
-```jsonc
-// Set CSS parsing using PostCSS in settings.json
-"files.associations": {
-  "*.css": "postcss"
-}
-```
-
 **Development ENV:**
 
 - NodeJs
@@ -57,4 +50,5 @@ pnpm preview
 
 ```shell
 pnpm lint
+pnpm lint:stylelint
 ```

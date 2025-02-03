@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { ref, reactive, toRef } from 'vue'
 import { useHead } from '@unhead/vue'
+import { reactive, ref, toRef } from 'vue'
 
 useHead({ title: 'Foo' })
 
