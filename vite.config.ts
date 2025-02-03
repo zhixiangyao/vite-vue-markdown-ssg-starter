@@ -1,13 +1,13 @@
 import type { ConfigEnv, UserConfigExport } from 'vite'
-import { defineConfig } from 'vite'
 import fs from 'node:fs'
-
 import { resolve } from 'node:path'
+
 import Vue from '@vitejs/plugin-vue'
 import dotenv from 'dotenv' // Dotenv is a zero-dependency module that extracts the variables in the env variable from the '.env*' file
 import matter from 'gray-matter'
 import Prism from 'markdown-it-prism'
 import Markdown from 'unplugin-vue-markdown/vite'
+import { defineConfig } from 'vite'
 
 import viteCompression from 'vite-plugin-compression'
 import Pages from 'vite-plugin-pages'
@@ -93,7 +93,8 @@ export default ({ command, mode }: ConfigEnv) => {
 
   if (command === 'serve') {
     return defineConfig({ ...baseConfig })
-  } else {
+  }
+  else {
     return defineConfig({ ...baseConfig })
   }
 }
